@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0909048519851CC000F8892C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0909048419851CC000F8892C /* main.cpp */; };
 		0909048719851CC000F8892C /* P3.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0909048619851CC000F8892C /* P3.1 */; };
+		0909048F19851CD800F8892C /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0909048D19851CD800F8892C /* Game.cpp */; };
+		0909049219851CEA00F8892C /* Tank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0909049019851CEA00F8892C /* Tank.cpp */; };
+		0909049519851CFA00F8892C /* Piece.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0909049319851CFA00F8892C /* Piece.cpp */; };
+		090904991985819A00F8892C /* imitris.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 090904971985819A00F8892C /* imitris.cpp */; };
+		0909049C198581CE00F8892C /* UserInterfaceUnix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0909049A198581CE00F8892C /* UserInterfaceUnix.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +30,17 @@
 
 /* Begin PBXFileReference section */
 		0909048119851CC000F8892C /* P3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = P3; sourceTree = BUILT_PRODUCTS_DIR; };
-		0909048419851CC000F8892C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0909048619851CC000F8892C /* P3.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = P3.1; sourceTree = "<group>"; };
+		0909048D19851CD800F8892C /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		0909048E19851CD800F8892C /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		0909049019851CEA00F8892C /* Tank.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tank.cpp; sourceTree = "<group>"; };
+		0909049119851CEA00F8892C /* Tank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tank.h; sourceTree = "<group>"; };
+		0909049319851CFA00F8892C /* Piece.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Piece.cpp; sourceTree = "<group>"; };
+		0909049419851CFA00F8892C /* Piece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Piece.h; sourceTree = "<group>"; };
+		090904961985817900F8892C /* randPieceType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = randPieceType.h; sourceTree = "<group>"; };
+		090904971985819A00F8892C /* imitris.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imitris.cpp; sourceTree = "<group>"; };
+		0909049A198581CE00F8892C /* UserInterfaceUnix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UserInterfaceUnix.cpp; sourceTree = "<group>"; };
+		0909049B198581CE00F8892C /* UserInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInterface.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +73,17 @@
 		0909048319851CC000F8892C /* P3 */ = {
 			isa = PBXGroup;
 			children = (
-				0909048419851CC000F8892C /* main.cpp */,
 				0909048619851CC000F8892C /* P3.1 */,
+				0909048E19851CD800F8892C /* Game.h */,
+				0909048D19851CD800F8892C /* Game.cpp */,
+				0909049019851CEA00F8892C /* Tank.cpp */,
+				0909049119851CEA00F8892C /* Tank.h */,
+				090904961985817900F8892C /* randPieceType.h */,
+				090904971985819A00F8892C /* imitris.cpp */,
+				0909049A198581CE00F8892C /* UserInterfaceUnix.cpp */,
+				0909049B198581CE00F8892C /* UserInterface.h */,
+				0909049319851CFA00F8892C /* Piece.cpp */,
+				0909049419851CFA00F8892C /* Piece.h */,
 			);
 			path = P3;
 			sourceTree = "<group>";
@@ -117,7 +139,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0909048519851CC000F8892C /* main.cpp in Sources */,
+				0909049519851CFA00F8892C /* Piece.cpp in Sources */,
+				0909049C198581CE00F8892C /* UserInterfaceUnix.cpp in Sources */,
+				090904991985819A00F8892C /* imitris.cpp in Sources */,
+				0909048F19851CD800F8892C /* Game.cpp in Sources */,
+				0909049219851CEA00F8892C /* Tank.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +223,8 @@
 		0909048B19851CC000F8892C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LD_MAP_FILE_PATH = "-lncurses";
+				OTHER_LDFLAGS = "-lncurses";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -204,6 +232,8 @@
 		0909048C19851CC000F8892C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LD_MAP_FILE_PATH = "-lncurses";
+				OTHER_LDFLAGS = "-lncurses";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -227,6 +257,7 @@
 				0909048C19851CC000F8892C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
